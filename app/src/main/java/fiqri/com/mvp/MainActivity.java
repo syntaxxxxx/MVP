@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 import javax.xml.transform.Templates;
 
-public class MainActivity extends AppCompatActivity implements MainView, View.OnClickListener {
+public class MainActivity extends AppCompatActivity
+        implements MainView, View.OnClickListener {
 
     private EditText edtAlas, edtTinggi;
     private TextView tvResult;
@@ -30,9 +31,9 @@ public class MainActivity extends AppCompatActivity implements MainView, View.On
 
         if (savedInstanceState != null) {
             String result = savedInstanceState.getString(STATE_HASIL);
-                tvResult.setText(result);
-            }
+            tvResult.setText(result);
         }
+    }
 
 
     @Override
@@ -54,14 +55,21 @@ public class MainActivity extends AppCompatActivity implements MainView, View.On
         String msg = "Tidak Boleh Kosong";
         String validNumber = "Harus Berupa Nomor Valid";
 
-        if (TextUtils.isEmpty(alas) || TextUtils.isEmpty(tinggi)) {
+        if (TextUtils.isEmpty(alas)) {
             isEmptyFiled = true;
             edtAlas.setError(msg);
-            edtTinggi.setError(msg);
 
-        } else if (!isDouble(alas) || !isDouble(tinggi)) {
+        } else if (TextUtils.isEmpty(alas)) {
             isNumberValid = true;
             edtAlas.setError(validNumber);
+        }
+
+        if (TextUtils.isEmpty(tinggi)) {
+            isEmptyFiled = true;
+            edtAlas.setError(msg);
+
+        } else if (TextUtils.isEmpty(tinggi)) {
+            isNumberValid = true;
             edtTinggi.setError(validNumber);
         }
 
@@ -70,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements MainView, View.On
             double tgi = Double.parseDouble(tinggi);
 
             presenter.hitungLuas(als, tgi);
+
         }
     }
 

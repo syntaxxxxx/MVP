@@ -1,13 +1,13 @@
 package fiqri.com.mvp;
 
-public class MainModel {
+class MainModel {
     private double luas;
 
-    public MainModel(double luas) {
+    MainModel(double luas) {
         this.luas = luas;
     }
 
-    public double getLuas() {
+    double getLuas() {
         return luas;
     }
 }
