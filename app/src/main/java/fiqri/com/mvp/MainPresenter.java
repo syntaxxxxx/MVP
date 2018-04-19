@@ -1,6 +1,6 @@
 package fiqri.com.mvp;
 
-    public class MainPresenter {
+public class MainPresenter {
     private MainView view;
 
     MainPresenter(MainView view) {
