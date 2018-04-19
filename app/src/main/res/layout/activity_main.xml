@@ -11,15 +11,13 @@
         android:id="@+id/edt_alas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukan Alas"
-        android:inputType="number" />
+        android:hint="Masukan Alas" />
 
     <EditText
         android:id="@+id/edt_tinggi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukan Tinggi"
-        android:inputType="number" />
+        android:hint="Masukan Tinggi" />
 
     <Button
         android:id="@+id/btn_hitung"

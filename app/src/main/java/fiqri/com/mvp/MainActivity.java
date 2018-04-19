@@ -59,16 +59,16 @@ public class MainActivity extends AppCompatActivity
             isEmptyFiled = true;
             edtAlas.setError(msg);
 
-        } else if (TextUtils.isEmpty(alas)) {
+        } else if (!isDouble(alas)) {
             isNumberValid = true;
             edtAlas.setError(validNumber);
         }
 
         if (TextUtils.isEmpty(tinggi)) {
             isEmptyFiled = true;
-            edtAlas.setError(msg);
+            edtTinggi.setError(msg);
 
-        } else if (TextUtils.isEmpty(tinggi)) {
+        } else if (!isDouble(tinggi)) {
             isNumberValid = true;
             edtTinggi.setError(validNumber);
         }
